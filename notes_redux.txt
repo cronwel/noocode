@@ -1,0 +1,20 @@
+
+
+Concept
+
+index.js =  data layer control
+            (REDUX)
+
+App.js =    Rendering Layer control
+            (REACT ROUTER)
+
+
+  INDEX
+  |
+  v
+App
+|             |               |
+Landing     Header    Dashboard   Survey
+
+
+  

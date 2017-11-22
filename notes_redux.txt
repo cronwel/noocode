@@ -50,3 +50,16 @@ Back-end Node.js supports common js modules
     </a>
   </div>
 </nav>
+
+
+Rules of Billing
+We are bad at Security
+- never access raw credit care numbers
+- never store credit card numbers
+- always use an outside payment processor
+
+Web developers suck at security
+
+Billing is hard
+- Possible to avoid montly payments/multiple plans
+- Fraud and chargebacks are a pain

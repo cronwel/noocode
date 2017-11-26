@@ -63,3 +63,10 @@ Web developers suck at security
 Billing is hard
 - Possible to avoid montly payments/multiple plans
 - Fraud and chargebacks are a pain
+
+
+Random notes
+
+learn middleware as concept
+options to express
+options in other langauages

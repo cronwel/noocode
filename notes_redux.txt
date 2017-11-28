@@ -33,7 +33,7 @@ export default App;
 
 
 import is used now
-becuase we are using webpack and babel
+because we are using webpack and babel
 provides access to ES2015 modules
 
 Back-end Node.js supports common js modules
@@ -61,7 +61,7 @@ We are bad at Security
 Web developers suck at security
 
 Billing is hard
-- Possible to avoid montly payments/multiple plans
+- Possible to avoid monthly payments/multiple plans
 - Fraud and chargebacks are a pain
 
 
@@ -69,4 +69,4 @@ Random notes
 
 learn middleware as concept
 options to express
-options in other langauages
+options in other languages

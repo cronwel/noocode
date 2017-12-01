@@ -10,6 +10,7 @@ module.exports = app => {
   app.get('/api/surveys/thanks', (req, res) => {
     res.send('You voted?!!! That is democracry son!');
   });
+
   app.post('api/surveys', requireLogin, requireCredits, async (req, res) => {
     const { title, subject, body, recipients } = req.body;
 

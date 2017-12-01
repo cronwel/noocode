@@ -48,10 +48,15 @@ class SurveyForm extends Component {
 
 function validate(values) {
   const errors = {};
-  if (values.title) {
+  if (!values.title) {
     errors.title = 'Enter title';
   }
-
+  if (!values.subject) {
+    errors.subject = 'Enter a subject for your email';
+  }
+  if (!values.body) {
+    errors.body = 'Enter email information to send to recipients';
+  }
   return errors;
 }
 export default reduxForm({

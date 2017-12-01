@@ -1,5 +1,7 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { Link } from 'react-router-dom';
 import SurveyField from './SurveyField';
 
 const FIELDS = [
@@ -11,47 +13,48 @@ const FIELDS = [
 
 class SurveyForm extends Component {
   renderFields() {
-    return (
-      <div>
+    return _.map(FIELDS, ({ label, name }) => {
+      return (
         <Field
-          type="text"
-          label="Survey Title"
-          name="title"
+          key={name}
           component={SurveyField}
-        />
-        <Field
           type="text"
-          label="Subject Line"
-          name="subject"
-          component={SurveyField}
+          label={label}
+          name={name}
         />
-        <Field
-          type="text"
-          label="Email Body"
-          name="body"
-          component={SurveyField}
-        />
-        <Field
-          type="text"
-          label="Recipient List"
-          name="emails"
-          component={SurveyField}
-        />
-      </div>
-    );
+      );
+    });
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <form onSubmit={this.props.handleSubmit(values => console.log(values))}>
           {this.renderFields()}
-          <button type="submit">Submit</button>
+          <Link to="/surveys" className="red btn-flat left white-text">
+            Cancel
+          </Link>
+
+          <button type="submit" className="teal btn-flat right white-text">
+            Next
+            <i className="material-icons" right>
+              done
+            </i>
+          </button>
         </form>
       </div>
     );
   }
 }
 
+function validate(values) {
+  const errors = {};
+  if (values.title) {
+    errors.title = 'Enter title';
+  }
+
+  return errors;
+}
 export default reduxForm({
+  validate,
   form: 'surveyForm'
 })(SurveyForm);
